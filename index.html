@@ -1,7 +1,33 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>旅游和演唱会</title>
-  
+layout: default
+title: Home
+notitle: true
+
+role-table:
+- - roles:[sunrise]
+    width:12
+    image:true
+- - roles:[seaside]
+    width:6
+    image:true
+  - roles:[seaside2]
+    width:6
+    image:true
+- - roles: [building]
+    width: 12
+    image: true
+
+<div class="jumbotron">
+    <p>
+        <b>这是一些旅游时风景的照片</b> 。
+    </p>
+    <p>
+       <b>Here are some pictures of the scenery during the trip</b> 。
+    </p>
+</div>
+
+<div class="role">
+    <h3>{{ role }}</h3>
+    {% if image %}
+        <img src="{{ site.base }}/images/{{ role }}.jpg" alt="{{ role }} image" class="img-fluid">
+    {% endif %}
+</div>
